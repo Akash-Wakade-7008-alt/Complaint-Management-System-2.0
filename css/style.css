@@ -6,15 +6,16 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Segoe UI, sans-serif;
+  font-family:
+    Segoe UI,
+    sans-serif;
 }
 
 body {
-  background: #f4f6fb;
+  background: #ffffff;
   color: #333;
 }
-
-/* NAVBAR */
+/* navbar */
 
 .navbar {
   display: flex;
@@ -22,7 +23,7 @@ body {
   align-items: center;
   padding: 15px 80px;
   background: white;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -35,14 +36,14 @@ body {
 }
 
 .logo-container img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 .logo-text {
   font-size: 22px;
   font-weight: bold;
-  background: linear-gradient(45deg,#2563eb,#9333ea);
+  background: linear-gradient(45deg, #2563eb, #9333ea);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -51,13 +52,14 @@ body {
   margin-left: 25px;
   text-decoration: none;
   color: #444;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .login-btn {
-  background: linear-gradient(45deg,#2563eb,#9333ea);
-  color: white;
+  background: linear-gradient(45deg, #2563eb, #9333ea);
+  color: rgb(255, 255, 255);
   padding: 8px 18px;
+  font-weight: 600;
   border-radius: 6px;
 }
 
@@ -66,20 +68,18 @@ body {
   padding: 7px 18px;
   border-radius: 6px;
   color: #9333ea;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .login-btn:hover,
 .signup-btn:hover {
   opacity: 0.9;
-  transform: translateY(-2px);
-  transition: 0.2s;
 }
 
-/* HERO */
+/* hero */
 
 .hero {
-  background: linear-gradient(135deg,#2563eb,#9333ea);
+  background: linear-gradient(135deg, #2563eb, #9333ea);
   color: white;
   text-align: center;
   padding: 130px 20px;
@@ -104,11 +104,10 @@ body {
   padding: 14px 30px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .hero-btn:hover {
-  transform: translateY(-2px);
   transition: 0.2s;
 }
 
@@ -127,16 +126,18 @@ body {
 .feature-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
 .card {
   background: white;
+  cursor: pointer;
   width: 280px;
   padding: 35px;
+  border: 2px solid rgb(157, 39, 235);
   border-radius: 14px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
@@ -149,7 +150,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* HOW IT WORKS */
+/* how it works */
 
 .how {
   background: white;
@@ -173,7 +174,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(45deg,#2563eb,#9333ea);
+  background: linear-gradient(45deg, #2563eb, #9333ea);
   color: white;
   display: flex;
   align-items: center;
@@ -183,12 +184,12 @@ body {
   margin-bottom: 15px;
 }
 
-/* CTA */
+/* cta */
 
 .cta {
   width: 80%;
   margin: 10px auto;
-  background: linear-gradient(135deg,#2563eb,#9333ea);
+  background: linear-gradient(135deg, #2563eb, #9333ea);
   color: white;
   text-align: center;
   padding: 70px 20px;
@@ -206,14 +207,16 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transform: scale(1) translateY(0px);
+  transition: transform 1s ease;
+  transform-origin: center;
 }
 
 .cta-btn:hover {
-  transform: translateY(-2px);
-  transition: 0.2s;
+  transform: scale(1.1) translateY(-10px);
 }
 
-/* CONTACT */
+/* contact */
 
 .contact {
   background: #f9fafc;
@@ -235,89 +238,80 @@ body {
   margin-right: auto;
 }
 
+/* responsive design */
 
-/* ========================= */
-/* RESPONSIVE DESIGN */
-/* ========================= */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
 
-@media (max-width: 1024px){
-
-.navbar{
-padding:15px 40px;
+  .hero h1 {
+    font-size: 40px;
+  }
 }
 
-.hero h1{
-font-size:40px;
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .feature-container {
+    gap: 25px;
+  }
+
+  .steps {
+    gap: 25px;
+  }
+
+  .cta {
+    width: 90%;
+    padding: 50px 20px;
+  }
 }
 
-}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
 
-@media (max-width: 768px){
+  .features h2,
+  .how h2,
+  .contact h2 {
+    font-size: 26px;
+  }
 
-.navbar{
-flex-direction:column;
-gap:15px;
-padding:15px 20px;
-}
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
 
-.nav-links{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-}
-
-.nav-links a{
-margin-left:0;
-}
-
-.hero{
-padding:100px 20px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.feature-container{
-gap:25px;
-}
-
-.steps{
-gap:25px;
-}
-
-.cta{
-width:90%;
-padding:50px 20px;
-}
-
-}
-
-@media (max-width: 480px){
-
-.hero h1{
-font-size:28px;
-}
-
-.features h2,
-.how h2,
-.contact h2{
-font-size:26px;
-}
-
-.card{
-width:100%;
-max-width:320px;
-}
-
-.step{
-width:100%;
-max-width:220px;
-}
-
+  .step {
+    width: 100%;
+    max-width: 220px;
+  }
 }
