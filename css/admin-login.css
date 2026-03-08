@@ -1,15 +1,14 @@
-
-.input-group{
+.input-group-admin{
 text-align:left;
 margin-bottom:16px;
 }
 
-.input-group label{
+.input-group-admin label{
 font-size:14px;
 font-weight:600;
 }
 
-.input-group input{
+.input-group-admin input{
 width:100%;
 padding:10px;
 margin-top:6px;
@@ -18,12 +17,12 @@ border:1px solid #ccc;
 font-size:14px;
 }
 
-.input-group input:focus{
+.input-group-admin input:focus{
 outline:none;
 border-color:#6d28d9;
 }
 
-.login-btn{
+.login-btn-admin{
 width:100%;
 padding:11px;
 border:none;
@@ -34,6 +33,6 @@ border-radius:8px;
 cursor:pointer;
 }
 
-.login-btn:hover{
+.login-btn-admin:hover{
 background:#7e22ce;
 }
